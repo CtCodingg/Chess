@@ -1,12 +1,24 @@
 # Chess Game
 
-## Installing Dependencies on Linux
+## Installing Dependencies on Ubuntu
 
-You can install these dependencies using the following commands:
+By following these steps, you will set up the required libraries (GLUT, GLEW, GLM, OpenGL) and development tools (g++, make, cmake) on Ubuntu.
 
 ```sh
-sudo apt-get update
-sudo apt install freeglut3-dev libglew-dev libglm-dev
+sudo apt update
+sudo apt install build-essential libgl1-mesa-dev libglu1-mesa-dev freeglut3 freeglut3-dev libglew-dev libglm-dev mesa-utils cmake
+```
+
+## Check installation
+
+Run glxinfo to check if OpenGL is properly installed and supported. This will show you the OpenGL version and other related details. Look for entries like OpenGL version string and OpenGL renderer string.
+```sh
+glxinfo | grep "OpenGL"
+```
+
+Run the simple OpenGL demo glxgears to check if OpenGL rendering works on your system. If the gears appear and rotate, OpenGL is working correctly.
+```sh
+glxgears
 ```
 
 ## Build the game
